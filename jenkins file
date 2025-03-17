@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git url: 'https://github.com/Manmadha007/Simple-webapp-html-css.git', branch: 'main'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                sh '''
+                mkdir -p ~/simple-web-app
+                cp -r * ~/simple-web-app
+                '''
+            }
+        }
+    }
+}
