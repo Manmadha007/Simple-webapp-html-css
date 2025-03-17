@@ -9,7 +9,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh '''
-                mkdir -p ~/simple-web-apps
+                mkdir -p ~/simple-web-app
                 cp -r * ~/simple-web-app
                 '''
             }
